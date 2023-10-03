@@ -1,8 +1,18 @@
 #ejercicio 1
+#numeros=[8, 20, 3, 45, 66, 75, 65, 55, 86, 88, 80, 83, 80, 18 ]
+lista_requerida = input("Ingrese una lista de números separados por comas: ")
 
+lista_requerida_strings = lista_requerida.split(',')
 
-numeros=[8, 20, 3, 45, 66, 75, 65, 55, 86, 88, 80, 83, 80, 18 ]
-n=1
+try:
+    numeros = [int(num) for num in lista_requerida_strings]
+except ValueError:
+    print("Error: Asegúrese de ingresar números válidos separados por comas.")
+    exit()
+
+S = input('Ingrese el valor de n: ')
+n = int(S)
+
 
 def main(numeros):
 

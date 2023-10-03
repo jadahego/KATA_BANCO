@@ -1,5 +1,16 @@
-numbers = [5, 4, 11, 6, 7, -2, 8, 9, -10, 0]
-n=10
+#numbers = [5, 4, 11, 6, 7, -2, 8, 9, -10, 0]
+lista_requerida = input("Ingrese una lista de números separados por comas: ")
+
+lista_requerida_strings = lista_requerida.split(',')
+
+try:
+    numbers = [int(num) for num in lista_requerida_strings]
+except ValueError:
+    print("Error: Asegúrese de ingresar números válidos separados por comas.")
+    exit()
+
+S = input('Ingrese el valor de n: ')
+n = int(S)
 
 def main(numbers):
 
