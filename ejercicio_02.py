@@ -12,6 +12,13 @@ except ValueError:
 S = input('Ingrese el valor de n: ')
 n = int(S)
 
+def ordenar(lista):
+    h=len(lista)
+    for i in range(h):
+        for j in range(0, h-i-1):
+            if lista[j] > lista[j+1]:
+                lista[j], lista[j+1] = lista[j+1], lista[j]
+
 def main(numbers):
 
     if not isinstance(n, int) or not (1 <= n <= 9):
@@ -19,10 +26,7 @@ def main(numbers):
 
     numbers_v2 = [i*i for i in numbers if i*i <= (n*11)]
   
-    for i in range(len(numbers)):
-            for j in range(0, n-i-1):
-                if numbers_v2[j] > numbers_v2[j+1]:
-                    numbers_v2[j], numbers_v2[j+1] = numbers_v2[j+1], numbers_v2[j]
+    ordenar(numbers_v2)
     
     return numbers_v2
 

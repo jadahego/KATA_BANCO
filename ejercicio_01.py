@@ -13,6 +13,13 @@ except ValueError:
 S = input('Ingrese el valor de n: ')
 n = int(S)
 
+def ordenar(lista):
+    h=len(lista)
+    for i in range(h):
+        for j in range(0, h-i-1):
+            if lista[j] < lista[j+1]:
+                lista[j], lista[j+1] = lista[j+1], lista[j]
+
 
 def main(numeros):
 
@@ -27,11 +34,7 @@ def main(numeros):
         if numeros_c:
             numeros_final.append(int(numeros_c))
 
-    for i in range(len(numeros)):
-        for j in range(0, n-i-1):
-            if numeros_final[j] < numeros_final[j+1]:
-                numeros_final[j], numeros_final[j+1] = numeros_final[j+1], numeros_final[j]
-
+    ordenar(numeros_final)
 
     return numeros_final
   
