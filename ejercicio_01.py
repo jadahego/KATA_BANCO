@@ -27,12 +27,10 @@ def main(numeros):
         raise ValueError("n debe ser un número entero en el rango de 1 a 9")
 
     numeros_final = []
+    
+    numeros_c = [''.join([i for i in str(k) if int(i) < n]) for k in numeros]
 
-    for k in numeros:
-        k_str = str(k)
-        numeros_c= ''.join([i for i in k_str if int(i) < n])
-        if numeros_c:
-            numeros_final.append(int(numeros_c))
+    numeros_final = [int(c) for c in numeros_c if c]  
 
     ordenar(numeros_final)
 
