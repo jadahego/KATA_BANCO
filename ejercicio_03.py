@@ -25,7 +25,6 @@ def minimadecambio(nominaciones):
         if (i > monedas + 1):
             return monedas +1
         monedas += i
-    
 
     return monedas + 1
 
