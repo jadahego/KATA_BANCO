@@ -25,8 +25,6 @@ def main(numeros):
 
     if not isinstance(n, int) or not (1 <= n <= 9):
         raise ValueError("n debe ser un número entero en el rango de 1 a 9")
-
-    numeros_final = []
     
     numeros_c = [''.join([i for i in str(k) if int(i) < n]) for k in numeros]
 
